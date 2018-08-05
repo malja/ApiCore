@@ -186,7 +186,6 @@ class App
         require_once "./core/Autoloader.php"; // Make sure base autoloader is visible
         include "./core/DefaultAutoloader.php";
         \core\DefaultAutoloader::register();
-        \core\VendorAutoloader::register();
     }
 
     /**
