@@ -32,10 +32,10 @@
  * @link     https://github.com/malja/ApiCore
  */
 
-namespace core\Auth;
+namespace malja\ApiCore\Auth;
 
-use \core\Auth\Authenticator;
-use \core\Request;
+use \malja\ApiCore\Auth\Authenticator;
+use \malja\ApiCore\Request;
 use \DateTime;
 
 /**
@@ -54,7 +54,7 @@ use \DateTime;
  * respectively.
  *
  * This lookup is done with so-called Token class. This class is a model
- * (extends \core\Model) and in addition to all rows for managing privileges
+ * (extends \malja\ApiCore\Model) and in addition to all rows for managing privileges
  * (which API calls are visible to them) it sets following keys required for
  * Token Authenticator.
  *
@@ -106,7 +106,7 @@ class TokenAuthenticator extends Authenticator
      * **Note**: Requests older than 30 second are automatically discarded and
      * considered invalid.
      *
-     * @param \core\Request $request Request data.
+     * @param \malja\ApiCore\Request $request Request data.
      * @return null|object Null when authentication failed, instance of Token
      * class otherwise.
      */

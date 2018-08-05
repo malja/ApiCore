@@ -32,9 +32,9 @@
  * @link     https://github.com/malja/ApiCore
  */
 
-namespace core;
+namespace malja\ApiCore;
 
-use core\Scheme;
+use malja\ApiCore\Scheme;
 
 /**
  * Load, merge and serve content of multiple configuration files.
@@ -56,11 +56,11 @@ class Config
      * scheme validation exception is thrown.
      *
      * @param string $path Path to configuration file.
-     * @param core\Scheme Scheme for validation or null for no validation.
+     * @param malja\ApiCore\Scheme Scheme for validation or null for no validation.
      *
      * @throws \InvalidArgumentException If `$path` doesn't exist or file is not a PHP file.
      * @throws \Exception If configuration file returns something else than array.
-     * @throws \core\Schema\ValidationException If validation fails.
+     * @throws \malja\ApiCore\Schema\ValidationException If validation fails.
      *
      * @return bool Always true.
      */
@@ -113,7 +113,7 @@ class Config
      *
      * @param bool $strict In strict mode, exception is raised when key doesn't exist.
      *
-     * @return \core\Config Configuration instance.
+     * @return \malja\ApiCore\Config Configuration instance.
      */
     public function set(string $path, $value, bool $strict = true)
     {

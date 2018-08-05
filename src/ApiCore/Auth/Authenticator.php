@@ -31,9 +31,9 @@
  * @link     https://github.com/malja/ApiCore
  */
 
-namespace core\Auth;
+namespace malja\ApiCore\Auth;
 
-use \core\Auth\IAuthenticator;
+use \malja\ApiCore\Auth\IAuthenticator;
 
 /**
  * Base for all authenticators.

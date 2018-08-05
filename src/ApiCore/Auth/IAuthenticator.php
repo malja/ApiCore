@@ -1,9 +1,9 @@
 <?php
 
-namespace core\Auth;
+namespace malja\ApiCore\Auth;
 
-use \core\Request;
 use \JsonSerializable;
+use \malja\ApiCore\Request;
 
 /**
  * Interface for all authenticators.
@@ -13,7 +13,7 @@ interface IAuthenticator extends JsonSerializable
 
     /**
      * Method takes request and checks if it is signed properly.
-     * @param \core\Request $request Request data.
+     * @param \malja\ApiCore\Request $request Request data.
      */
     public function authenticate(Request $request);
 

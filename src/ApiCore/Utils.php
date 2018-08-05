@@ -32,7 +32,7 @@
  * @link     https://github.com/malja/ApiCore
  */
 
-namespace core;
+namespace malja\ApiCore;
 
 /**
  * Set of helpful utilities.
@@ -41,7 +41,7 @@ class Utils
 {
 
     /**
-     * Change CamelCaseName to underscore_separated_name.
+     * Change CamelCaseName to unserscore_separated_name.
      * @param $name String with CamelCase name.
      * @return String with name changed to underscore_separated form.
      */
@@ -50,7 +50,7 @@ class Utils
         preg_match_all('!([A-Z][A-Z0-9]*(?=$|[A-Z][a-z0-9])|[A-Za-z][a-z0-9]+)!', $name, $matches);
         $ret = $matches[0];
         foreach ($ret as &$match) {
-            $match = $match == strtoupper($match) ? strtolower($match) : lcfirst($match);
+            $match = strtoupper($match) == $match ? strtolower($match) : lcfirst($match);
         }
         return implode('_', $ret);
     }
@@ -65,7 +65,7 @@ class Utils
         $pbase = parse_url($base);
         $prel = parse_url($rel);
         $merged = array_merge($pbase, $prel);
-        if ($prel['path'][0] != '/') {
+        if ('/' != $prel['path'][0]) {
             // Relative path
             $dir = preg_replace('@/[^/]*$@', '', $pbase['path']);
             $merged['path'] = $dir . '/' . $prel['path'];
@@ -76,17 +76,17 @@ class Utils
         $path = [];
         $prevPart = '';
         foreach ($pathParts as $part) {
-            if ($part == '..' && count($path) > 0) {
+            if ('..' == $part && count($path) > 0) {
                 // Cancel out the parent directory (if there's a parent to cancel)
                 $parent = array_pop($path);
                 // But if it was also a parent directory, leave it in
-                if ($parent == '..') {
+                if ('..' == $parent) {
                     array_push($path, $parent);
                     array_push($path, $part);
                 }
-            } elseif ($prevPart != '' || ($part != '.' && $part != '')) {
+            } elseif ('' != $prevPart || ('.' != $part && '' != $part)) {
                 // Don't include empty or current-directory components
-                if ($part == '.') {
+                if ('.' == $part) {
                     $part = '';
                 }
                 array_push($path, $part);

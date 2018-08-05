@@ -5,7 +5,7 @@
  * @license MIT
  */
 
-namespace core\Schema;
+namespace malja\ApiCore\Schema;
 
 /**
  * A parameters class for field validation.

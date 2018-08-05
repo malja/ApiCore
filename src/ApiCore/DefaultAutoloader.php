@@ -32,9 +32,9 @@
  * @link     https://github.com/malja/ApiCore
  */
 
-namespace core;
+namespace malja\ApiCore;
 
-use \core\Autoloader;
+use \malja\ApiCore\Autoloader;
 
 /**
  * Default autoloader splits class name and namespace. Namespace is

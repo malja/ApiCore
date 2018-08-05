@@ -32,7 +32,7 @@
  * @link     https://github.com/malja/ApiCore
  */
 
-namespace core;
+namespace malja\ApiCore;
 
 /**
  * Autoloader is base class for all autoloaders, it defines two methods for

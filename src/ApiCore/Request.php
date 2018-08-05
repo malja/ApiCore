@@ -32,9 +32,9 @@
  * @link     https://github.com/malja/ApiCore
  */
 
-namespace core;
+namespace malja\ApiCore;
 
-use \core\RequestMethod;
+use \malja\ApiCore\RequestMethod;
 use \JsonSerializable;
 
 /**
@@ -45,7 +45,7 @@ class Request implements JsonSerializable
 {
 
     /**
-     * Pointer to \core\RequestMethod.
+     * Pointer to \malja\ApiCore\RequestMethod.
      */
     protected $method = null;
 
@@ -95,7 +95,7 @@ class Request implements JsonSerializable
      *
      * @return RequestMethod Class with method related data.
      */
-    public function method(): \core\RequestMethod
+    public function method(): \malja\ApiCore\RequestMethod
     {
         return $this->method;
     }
@@ -129,7 +129,7 @@ class Request implements JsonSerializable
     /**
      * Get token.
      *
-     * @return null|\core\Auth\Token Null for disabled authentication. In other
+     * @return null|\malja\ApiCore\Auth\Token Null for disabled authentication. In other
      * cases, function returns Token.
      */
     public function token()

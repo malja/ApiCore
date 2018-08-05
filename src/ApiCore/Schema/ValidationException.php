@@ -5,7 +5,7 @@
  * @license MIT
  */
 
-namespace core\Schema;
+namespace malja\ApiCore\Schema;
 
 /**
  * An exception that was built from a {@link Validation} object.

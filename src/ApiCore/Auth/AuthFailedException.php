@@ -1,6 +1,6 @@
 <?php
 
-namespace core\Auth;
+namespace malja\ApiCore\Auth;
 
 /**
  * Exception thrown when authentication method fails.

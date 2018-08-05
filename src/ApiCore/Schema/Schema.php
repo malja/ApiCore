@@ -5,7 +5,7 @@
  * @license MIT
  */
 
-namespace core\Schema;
+namespace malja\ApiCore\Schema;
 
 /**
  * A class for defining and validating data schemas.

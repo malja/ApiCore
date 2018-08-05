@@ -32,10 +32,10 @@
  * @link     https://github.com/malja/ApiCore
  */
 
-namespace core\Auth;
+namespace malja\ApiCore\Auth;
 
-use \core\Request;
-use \core\Auth\TokenAuthenticator;
+use \malja\ApiCore\Auth\TokenAuthenticator;
+use \malja\ApiCore\Request;
 
 /**
  * Class for testing token authentication. Authentication only finds Token by client
@@ -48,7 +48,7 @@ use \core\Auth\TokenAuthenticator;
  * TokenAuthenticator. But in reality, only following keys are required:
  * - `auth_token_public`.
  *
- * @see \core\Auth\TokenAuthenticator
+ * @see \malja\ApiCore\Auth\TokenAuthenticator
  */
 class DummyTokenAuthenticator extends TokenAuthenticator
 {
@@ -62,7 +62,7 @@ class DummyTokenAuthenticator extends TokenAuthenticator
      *
      * Nonce, Datetime and Signature is not checked.
      *
-     * @param \core\Request $request Request for authentication.
+     * @param \malja\ApiCore\Request $request Request for authentication.
      * @return object|null Token class if found, else null.
      */
     public function authenticate(Request $request)
@@ -72,10 +72,10 @@ class DummyTokenAuthenticator extends TokenAuthenticator
         $key_public = $headers["Auth-Public"] ?? "";
 
         $token = call_user_func($this->tokenClassName . "::findOne", [
-            "auth_token_public" => $key_public
+            "auth_token_public" => $key_public,
         ]);
 
-        if ($token === null) {
+        if (null === $token) {
             $this->addErrorMessage("Public key doesn't exist.");
             return null;
         }

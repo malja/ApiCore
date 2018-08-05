@@ -32,16 +32,16 @@
  * @link     https://github.com/malja/ApiCore
  */
 
-namespace core;
+namespace malja\ApiCore;
 
 use PicORM\PicORM;
 use Whoops\Handler\PrettyPageHandler;
 use Whoops\Run;
-use \core\Auth\AuthFailedException;
-use \core\Config;
-use \core\Request;
-use \core\Response;
-use \core\Router;
+use \malja\ApiCore\Auth\AuthFailedException;
+use \malja\ApiCore\Config;
+use \malja\ApiCore\Request;
+use \malja\ApiCore\Response;
+use \malja\ApiCore\Router;
 use \Exception;
 use \PDO;
 
@@ -104,7 +104,7 @@ class App
     }
 
     /**
-     * Create instance of \core\Router and load routes from 'app/routes.php'.
+     * Create instance of \malja\ApiCore\Router and load routes from 'app/routes.php'.
      *
      * **Note**: This method requires loaded configuration.
      * @throws \Exception When file with routes doesn't exist or it doesn't return
@@ -183,9 +183,9 @@ class App
      */
     protected function setAutoloader()
     {
-        require_once "./core/Autoloader.php"; // Make sure base autoloader is visible
-        include "./core/DefaultAutoloader.php";
-        \core\DefaultAutoloader::register();
+        require_once "./malja\ApiCore/Autoloader.php"; // Make sure base autoloader is visible
+        include "./malja\ApiCore/DefaultAutoloader.php";
+        \malja\ApiCore\DefaultAutoloader::register();
     }
 
     /**
@@ -342,9 +342,9 @@ class App
     /**
      * Get configuration.
      *
-     * @return \core\Config Configuration.
+     * @return \malja\ApiCore\Config Configuration.
      */
-    public function config(): \core\Config
+    public function config(): \malja\ApiCore\Config
     {
         return $this->config;
     }
@@ -352,9 +352,9 @@ class App
     /**
      * Return router.
      *
-     * @return \core\Router Router instance.
+     * @return \malja\ApiCore\Router Router instance.
      */
-    public function router(): \core\Router
+    public function router(): \malja\ApiCore\Router
     {
         return $this->router;
     }

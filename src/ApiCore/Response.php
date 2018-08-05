@@ -32,10 +32,10 @@
  * @link     https://github.com/malja/ApiCore
  */
 
-namespace core;
+namespace malja\ApiCore;
 
-use core\Model;
-use core\PicORM\Collection;
+use malja\ApiCore\Model;
+use malja\ApiCore\PicORM\Collection;
 use \JsonSerializable;
 
 /**
@@ -69,7 +69,7 @@ class Response implements JsonSerializable
      * @param int $code HTTP status code. See list of them at
      * https://www.restapitutorial.com/httpstatuscodes.html
      *
-     * @param array|core\PicORM\Collection|core\Model $data Data for output.
+     * @param array|malja\ApiCore\PicORM\Collection|malja\ApiCore\Model $data Data for output.
      *
      * @throws \InvalidArgumentException When setData() method fails to get
      * data.
@@ -85,7 +85,7 @@ class Response implements JsonSerializable
      * This function is for creating 200 OK status response from server. Use it
      * for outputting when the request succeeded.
      *
-     * @param array|\core\Model $data   Data parameter should contain all data
+     * @param array|\malja\ApiCore\Model $data   Data parameter should contain all data
      * found for required resource. In most cases, just pass model instance in.
      * Rarely, array with pre-fetched data can be used.
      *
@@ -316,7 +316,7 @@ class Response implements JsonSerializable
     /**
      * Parse data and save it in right format.
      *
-     * @param array|\core\PicORM\Collection|\core\Model|object Data source.
+     * @param array|\malja\ApiCore\PicORM\Collection|\malja\ApiCore\Model|object Data source.
      * @throws \InvalidArgumentException When `$data` is not one of required
      * types.
      */
@@ -335,8 +335,8 @@ class Response implements JsonSerializable
         } else {
             throw new \InvalidArgumentException(
                 "Parameter _data_ used for creating Response class have to be
-                one of following types: array, \core\Model,
-                \core\PicORM\Collection. Got type: " . gettype($data)
+                one of following types: array, \malja\ApiCore\Model,
+                \malja\ApiCore\PicORM\Collection. Got type: " . gettype($data)
             );
         }
     }

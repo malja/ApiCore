@@ -5,7 +5,7 @@
  * @license MIT
  */
 
-namespace core\Schema;
+namespace malja\ApiCore\Schema;
 
 /**
  * An class for collecting validation errors.

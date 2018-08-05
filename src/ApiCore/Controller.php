@@ -32,9 +32,9 @@
  * @link     https://github.com/malja/ApiCore
  */
 
-namespace core;
+namespace malja\ApiCore;
 
-use \core\App;
+use \malja\ApiCore\App;
 
 /**
  * Base for all controllers.
@@ -46,7 +46,7 @@ use \core\App;
 class Controller
 {
     /**
-     * Pointer to \core\App class instance.
+     * Pointer to \malja\ApiCore\App class instance.
      */
     protected $app = null;
 
@@ -56,7 +56,7 @@ class Controller
      * This action is always called from application itself. Do not create controllers
      * itself.
      *
-     * @param \core\App $application Application which created this controller.
+     * @param \malja\ApiCore\App $application Application which created this controller.
      */
     public function __construct(App $application)
     {

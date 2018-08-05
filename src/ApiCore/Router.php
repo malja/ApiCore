@@ -23,7 +23,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-namespace core;
+namespace malja\ApiCore;
 
 /**
  * Class for routing URL to right Controller based on configuration.
