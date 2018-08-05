@@ -8,7 +8,7 @@
     },
     "require": {
         "phpunit/phpunit": "^7",
-        "malja/picorm": "0.0.*",
+        "malja/picorm": "0.0.8",
         "altorouter/altorouter": "1.2.0",
         "zeptech/annotations": "1.1.0",
         "filp/whoops": "^2.2",
