@@ -1,6 +1,7 @@
 ﻿1) Upravit index (potažmo třídu App) aby bylo možné autentizaci vypnout pro
 určené koncové body
 2) Uživatel by měl mít možnost upravit, přidat, mazat atd autoloadery.
+3) Rozchození těch vzájemných závislostí
 
 Hotovo:
 =======

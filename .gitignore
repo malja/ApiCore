@@ -1,6 +1,4 @@
+vendor/
 composer.lock
-sami.conf.php
-sami.phar
-generate_docs.cmd
+.DS_Store
 .vscode
-vendor

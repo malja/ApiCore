@@ -1,24 +1,21 @@
 {
     "name": "apicore/core",
-    "version": "0.0.1",
+    "description": "PHP micro framework for creating REST API.",
+    "keywords": ["framework", "rest", "api"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jan Malčák",
+            "email": "looorin@gmail.com"
+        }
+    ],
+    "type": "library",
+    "require": {
+		"php": ">=7.1"
+    },
     "autoload": {
         "psr-4": {
-            "malja\\ApiCore\\": ""
+            "malja\\ApiCore\\": "src/"
         }
-    },
-    "require": {
-        "phpunit/phpunit": "^7",
-        "picorm/picorm": "dev-develop",
-        "altorouter/altorouter": "1.2.0",
-        "zeptech/annotations": "1.1.0",
-        "filp/whoops": "^2.2",
-        "symfony/var-dumper": "^4.1"
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/malja/PicORM",
-            "branch": "dev-develop"
-        }
-    ]
+    }
 }
