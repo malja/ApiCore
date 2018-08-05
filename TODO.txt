@@ -1,0 +1,24 @@
+﻿1) Upravit index (potažmo třídu App) aby bylo možné autentizaci vypnout pro
+určené koncové body
+2) Uživatel by měl mít možnost upravit, přidat, mazat atd autoloadery.
+
+Hotovo:
+=======
+
+- Zkontrolovat, zda autentizace funguje, jak má.
+- začlenit autentizaci do jednotlivých controllerů (přes Request->token() dohledat ID, přes něj se dostat do api_keys a vybrat práva
+	Nakonec přímo token obsahuje informaci o právech, přidal jsem metody mayRead/Edit/Delete/List/Add pro zjištění těchto práv.
+
+- Dodělat funkci run v App, aby fungovala
+- Dodělat dokumentaci ke třídě app
+- Vygenerovat dokumentaci
+
+- Upravit parsování PUT requestu, aby se získalo voláním $request->method()->data() opravdu pole a né ta změť co teď
+	Stačí změnit typ dat z form-data na x-www-form-urlencoded
+
+- Přečíst si o PUT/POST/PATCH a případně nahradit všechny použití dle doporučení
+	PUT - uprava záznamu
+	POST - Vytvoření záznamu
+	PATCH - nebudu používat
+
+- Upravit model Versions aby podporoval nové úpravy v modelu a validaci

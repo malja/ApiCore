@@ -1,0 +1,6 @@
+composer.lock
+sami.conf.php
+sami.phar
+generate_docs.cmd
+.vscode
+vendor

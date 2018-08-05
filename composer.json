@@ -1,0 +1,24 @@
+{
+    "name": "malja/apicore",
+    "version": "0.0.1",
+    "autoload": {
+        "psr-4": {
+            "malja\\ApiCore\\": "src/"
+        }
+    },
+    "require": {
+        "phpunit/phpunit": "^7",
+        "malja/picorm": "0.0.*",
+        "altorouter/altorouter": "1.2.0",
+        "zeptech/annotations": "1.1.0",
+        "filp/whoops": "^2.2",
+        "symfony/var-dumper": "^4.1"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/malja/PicORM",
+            "branch": "develop"
+        }
+    ]
+}
