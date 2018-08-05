@@ -141,12 +141,12 @@ class App
     }
 
     /**
-     * Create config instance and load config from 'apiCore.php'.
+     * Create config instance and load config from 'config.php'.
      */
     protected function setConfig()
     {
         $this->config = new Config;
-        $this->config->loadFile("apiCore.php");
+        $this->config->loadFile("config.php");
     }
 
     /**
