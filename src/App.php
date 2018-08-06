@@ -146,7 +146,7 @@ class App
     protected function setConfig()
     {
         $this->config = new Config;
-        $this->config->loadFile(self::path() . "config.php");
+        $this->config->loadFile(self::path() . "/config.php");
     }
 
     /**
@@ -368,11 +368,11 @@ class App
     }
 
     /**
-     * Return path to apiCore root.
+     * Return path to ApiCore root.
      *
      * **Note**: Value is empty before application is created!
      *
-     * @return string Path to root.
+     * @return string Path to root without trailing slash.
      */
     public static function path(): string
     {
