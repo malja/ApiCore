@@ -37,12 +37,12 @@ namespace malja\ApiCore;
 use PicORM\PicORM;
 use Whoops\Handler\PrettyPageHandler;
 use Whoops\Run;
+use \Exception;
 use \malja\ApiCore\Auth\AuthFailedException;
 use \malja\ApiCore\Config;
 use \malja\ApiCore\Request;
 use \malja\ApiCore\Response;
 use \malja\ApiCore\Router;
-use \Exception;
 use \PDO;
 
 /**
@@ -123,14 +123,14 @@ class App
         );
 
         // Check if app configuration with routes exists
-        if (!file_exists("./app/routes.php")) {
+        if (!file_exists(self::path() . "/app/routes.php")) {
             throw new Exception(
                 "File 'app/routes.php' doesn't exist, or it isn't readable"
             );
         }
 
         // Get routes
-        $routes = include "./app/routes.php";
+        $routes = include self::path() . "/app/routes.php";
         if (!is_array($routes)) {
             throw new Exception("File 'app/routes.php' have to return an array");
         }
@@ -146,7 +146,7 @@ class App
     protected function setConfig()
     {
         $this->config = new Config;
-        $this->config->loadFile("config.php");
+        $this->config->loadFile(self::path() . "config.php");
     }
 
     /**
@@ -183,8 +183,6 @@ class App
      */
     protected function setAutoloader()
     {
-        require_once "./malja\ApiCore/Autoloader.php"; // Make sure base autoloader is visible
-        include "./malja\ApiCore/DefaultAutoloader.php";
         \malja\ApiCore\DefaultAutoloader::register();
     }
 
