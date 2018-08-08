@@ -34,9 +34,9 @@
 
 namespace malja\ApiCore;
 
-use \malja\ApiCore\PicORM\Model as BaseModel;
 use \malja\ApiCore\Schema\Schema;
 use \malja\ApiCore\Schema\ValidationException;
+use \PicORM\Model as BaseModel;
 
 /**
  * Model is a ORM representation of MySQL table. It is using PicORM under the
