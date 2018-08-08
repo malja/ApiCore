@@ -16,7 +16,8 @@
         "filp/whoops": "^2",
         "vanilla/garden-schema": "^1",
         "picorm/picorm": "dev-develop",
-        "zeptech/annotations": "1.1.0"
+        "zeptech/annotations": "1.1.0",
+        "symfony/var-dumper": "^v4"
     },
     "autoload": {
         "psr-4": {
