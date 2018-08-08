@@ -34,8 +34,8 @@
 
 namespace malja\ApiCore;
 
-use \malja\ApiCore\Schema\Schema;
-use \malja\ApiCore\Schema\ValidationException;
+use \Garden\Schema\Schema;
+use \Garden\Schema\ValidationException;
 use \PicORM\Model as BaseModel;
 
 /**
@@ -66,8 +66,8 @@ class Model extends BaseModel
      * @param array $data   Array with data.
      * @param bool $ignore_primary Ignore primary key rules.
      * @param bool $sparse Sparse parsing will ignore missing keys.
-     * @return \malja\ApiCore\Schema\Validation|bool Validation object on fail, true otherwise.
-     * @throws \malja\ApiCore\Schema\ValidationException
+     * @return \Garden\Schema\Validation|bool Validation object on fail, true otherwise.
+     * @throws \Garden\Schema\ValidationException
      * @link https://github.com/vanilla/garden-schema
      */
     public static function validateArray(array $data, bool $ignore_primary = false, bool $sparse = false)
@@ -118,7 +118,7 @@ class Model extends BaseModel
      * @param bool $ignore_primary Ignore rules for primary key.
      * @param bool $sparse Sparse validation will ignore missing keys.
      * @return bool|string Validity or error message.
-     * @throws \malja\ApiCore\Schema\ValidationException
+     * @throws \Garden\Schema\ValidationException
      * @see isValid()
      * @see validateArray()
      */

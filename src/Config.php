@@ -60,7 +60,7 @@ class Config
      *
      * @throws \InvalidArgumentException If `$path` doesn't exist or file is not a PHP file.
      * @throws \Exception If configuration file returns something else than array.
-     * @throws \malja\ApiCore\Schema\ValidationException If validation fails.
+     * @throws \Garden\Schema\ValidationException If validation fails.
      *
      * @return bool Always true.
      */
@@ -75,7 +75,7 @@ class Config
         }
 
         // Get data
-        $data = include($path);
+        $data = include $path;
 
         // Check if we got a PHP array
         if (!is_array($data)) {
@@ -85,7 +85,7 @@ class Config
         }
 
         // Validate data with scheme
-        if ($scheme !== null) {
+        if (null !== $scheme) {
             $scheme->validate($data);
         }
 
@@ -207,7 +207,7 @@ class Config
      */
     public function has(string $path)
     {
-        
+
         // Path to key cannot be empty
         if (empty($path)) {
             throw new \UnexpectedValueException(
