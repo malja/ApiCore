@@ -9,25 +9,31 @@
             "email": "looorin@gmail.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/malja/PicORM"
+        }
+    ],
     "type": "library",
     "require": {
         "php": ">=7.1",
         "altorouter/altorouter": "^1",
         "filp/whoops": "^2",
         "vanilla/garden-schema": "^1",
-        "picorm/picorm": "dev-develop",
         "zeptech/annotations": "1.1.0",
-        "symfony/var-dumper": "^v4"
+        "symfony/var-dumper": "^v4",
+        "picorm/picorm": "dev-master"
     },
     "autoload": {
         "psr-4": {
             "malja\\ApiCore\\": "src/"
         }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/malja/PicORM"
-        }
-    ]
+    "config": {
+        "preferred-install": {
+            "picorm/picorm": "source"
+        },
+        "*": "dist"
+    }
 }
