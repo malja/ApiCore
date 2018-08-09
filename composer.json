@@ -1,6 +1,6 @@
 {
     "name": "apicore/core",
-    "version": "0.0.1-dev",
+    "version": "0.0.1",
     "description": "PHP micro framework for creating REST API.",
     "keywords": ["framework", "rest", "api"],
     "license": "MIT",
@@ -19,10 +19,10 @@
     "type": "library",
     "require": {
         "php": ">=7.1",
-        "altorouter/altorouter": "^1",
-        "filp/whoops": "^2",
-        "vanilla/garden-schema": "^1",
-        "zeptech/annotations": "1.1.0",
+        "altorouter/altorouter": "^1.0.0",
+        "filp/whoops": "^2.2.0",
+        "vanilla/garden-schema": "^v1.2.0",
+        "zeptech/annotations": "^1.1.0",
         "symfony/var-dumper": "^v4",
         "picorm/picorm": "dev-master"
     },
