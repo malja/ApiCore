@@ -35,7 +35,7 @@
 namespace malja\ApiCore;
 
 use malja\ApiCore\Model;
-use malja\ApiCore\PicORM\Collection;
+use PicORM\Collection;
 use \JsonSerializable;
 
 /**
